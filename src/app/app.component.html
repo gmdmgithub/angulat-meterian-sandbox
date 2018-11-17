@@ -23,3 +23,50 @@
   </mat-radio-button>
 </mat-radio-group>
 <div class="selected-value">Your favorite car is: {{favoriteCar}}</div>
+
+<h4>Select value</h4>
+<mat-form-field>
+  <mat-select placeholder="Country" [formControl]="countries" multiple>
+    <mat-option *ngFor="let country of countryList" [value]="country.code">{{country.name}}</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<div>
+<h4 matTooltip="Some tooltip here ;-)">Imput fields</h4>
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input 
+      ngModel
+      name="f-food"
+      matInput placeholder="Favorite food" value="Sushi" required>
+      <span matSuffix>@domain.com</span>
+      <mat-hint>Errors appear instantly!</mat-hint>
+      <mat-error>Field is required!</mat-error>
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <textarea matInput placeholder="Leave a comment"></textarea>
+    </mat-form-field>
+  </form>
+</div>
+
+<div style="width: 200px">
+  <mat-form-field class="example-full-width">
+    <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" placeholder="Choose a date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <!-- prepare for mobile device -->
+    <mat-datepicker #picker touchUi="true"></mat-datepicker>
+  </mat-form-field>
+</div>
+<h2>Icons</h2>
+<mat-icon>add_alert</mat-icon>
+<h2 >Buttons</h2>
+<div class="example-button-row">
+<button mat-raised-button>Basic</button>
+  <button mat-raised-button color="primary">Primary</button>
+<button mat-raised-button color="secondary">Secondary</button>
+<button mat-raised-button color="accent">Accent</button>
+<button mat-raised-button color="warn">Warn</button>
+<button mat-raised-button disabled>Disabled</button>
+<a mat-raised-button routerLink=".">Link</a>
+</div>
