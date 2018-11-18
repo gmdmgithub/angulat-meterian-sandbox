@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { MatIconModule } from "@angular/material/icon";
-import { MatButtonModule, MatCheckboxModule, MatAutocompleteModule, MatSelectModule,  MatTooltipModule } from '@angular/material';
+import { MatButtonModule, MatCheckboxModule, MatAutocompleteModule, MatSelectModule,  MatTooltipModule, MatTabsModule } from '@angular/material';
 import { MatCardModule } from "@angular/material/card";
 import { MatListModule } from "@angular/material/list";
 import { MatSortModule } from "@angular/material/sort";
@@ -17,31 +16,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    MatIconModule,
-    MatCardModule,
-    MatListModule,
-    MatSortModule,
-    MatInputModule,
-    MatTableModule,
-    MatButtonModule,
-    MatDialogModule,
-    MatSidenavModule,
-    MatToolbarModule,
-    MatFormFieldModule,
-    MatCheckboxModule,
-    MatRadioModule,
-    MatAutocompleteModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    MatInputModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    MatIconModule,
-    MatButtonModule,
-    MatTooltipModule
-  ],
+ 
   exports: [
     MatIconModule,
     MatCardModule,
@@ -64,8 +39,8 @@ import { MatNativeDateModule } from '@angular/material';
     MatNativeDateModule,
     MatIconModule,
     MatButtonModule,
-    MatTooltipModule
-  ],
-  declarations: []
+    MatTooltipModule,
+    MatTabsModule
+  ]
 })
 export class AppMaterialModule {}
